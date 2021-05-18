@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+//Two Sum
+
 func main() {
 	var nums = []int{2, 7, 11, 15}
 	var target = 9
