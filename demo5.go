@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-type ListNode struct {
+type ListCycleNode struct {
 	Data interface{}
-	Next *ListNode
+	Next *ListCycleNode
 }
 
-func HasCycle(head *ListNode) bool  {
+func HasCycle(head *ListCycleNode) bool  {
 	if head == nil{
 		return false
 	}
@@ -23,11 +23,11 @@ func HasCycle(head *ListNode) bool  {
 }
 
 func main() {
-	var node1 = new(ListNode)
-	var node2 = new(ListNode)
-	var node3 = new(ListNode)
-	var node4 = new(ListNode)
-	var node5 = new(ListNode)
+	var node1 = new(ListCycleNode)
+	var node2 = new(ListCycleNode)
+	var node3 = new(ListCycleNode)
+	var node4 = new(ListCycleNode)
+	var node5 = new(ListCycleNode)
 
 	node1.Data = 1
 	node2.Data = 2

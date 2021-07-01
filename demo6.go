@@ -9,18 +9,15 @@ type listNewNode struct {
 
 func main()  {
 
-	list := []int{1,2,3,4}
-	head := &listNewNode{Data: list[0]}
-	tail := head
+	a := new(listNewNode)
+	a.Data = 1
+	a.Next = &listNewNode{2, &listNewNode{4, nil}}
 
-	for i := 1; i<len(list); i++  {
-		tail.Next = &listNewNode{Data: list[i]}
-		tail = tail.Next
-	}
-	//node4.Next = node5
-	head.show()
-	//mergerList := mergerTwoListNode(node1,node2)
-
+	b := new(listNewNode)
+	b.Data = 1
+	b.Next = &listNewNode{3, &listNewNode{4, nil}}
+	c := mergerTwoListNode(a,b)
+	c.show()
 	//fmt.Printf("This list has cycle? Yes or No: %v\n", mergerList)
 }
 
