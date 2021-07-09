@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type listMidNode struct {
 	Data int
 	Next *listMidNode
@@ -7,13 +9,17 @@ type listMidNode struct {
 
 func main() {
 
-	head := &listMidNode{}
-	listOne := head
-	listOne.Data = 1
-	listOne.Next = &listMidNode{}
-	listOne = listOne.Next
-	listOne.Data = 1
-
+	list := []int{1, 2, 3, 4, 5}
+	head := &listMidNode{Data: list[0]}
+	tail := head
+	for i := 1; i < len(list); i++ {
+		tail.Next = &listMidNode{Data: list[i]}
+		tail = tail.Next
+	}
+	midUp := middleUpNode(head)
+	midDown := middleDownNode(head)
+	fmt.Printf("%d", midUp.Data)
+	fmt.Printf("%d", midDown.Data)
 }
 
 //1 2 3 4 5 6 7 8
