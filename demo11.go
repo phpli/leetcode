@@ -31,6 +31,7 @@ func quickSort(data []int, start, end int) {
 	}
 }
 
+
 //划定分区点
 func partition(data []int, start, end int) int {
 	pivot := data[start]

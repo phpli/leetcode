@@ -72,12 +72,10 @@ func insertionSort(a []int, n int) []int {
 	for i := 1; i < n; i++ {
 		tmp := a[i]
 		for j := i - 1; j >= 0; j-- {
-			if tmp < a[j] {
-				a[j+1] = a[j]
-				a[j] = tmp
-			} else {
+			if tmp > a[j] {
 				break
 			}
+			a[j+1], a[j] = a[j],tmp
 		}
 	}
 	return a

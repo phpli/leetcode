@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+/**
+two list merger
+ */
 type listNewNode struct {
 	Data int
 	Next *listNewNode
