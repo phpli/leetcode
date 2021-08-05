@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /**
 快排排序
 如果要排序数组中下标从 p 到 r 之间的一组数据，
@@ -17,10 +15,16 @@ import "fmt"
 */
 //排序
 
+// 也可以直接给定一个左右数组存放排好序的数据。  下面这个方式是在原基础上做数据的交换
+
+/**
+快排的时间复杂度 是O(nlogn)
+ */
+
 func main() {
 	var arr = []int{-1, 5, 2, 1, 4, 3}
 	quickSort(arr, 0, len(arr)-1)
-	fmt.Println(arr)
+	//fmt.Println(arr)
 }
 func quickSort(data []int, start, end int) {
 	var pivotPos int

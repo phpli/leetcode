@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 /**
+找到第K大元素
 所谓分区就是找到第一个元素的终极位置
+找到一个数组里的第k大的位置
  */
 func main()  {
 	var arr = []int{0, 5, 2, 1, 4, 3}
