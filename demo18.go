@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	var head = new(newListNode)
+	//var head = new(newListNode)
 
 }
 
