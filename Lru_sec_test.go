@@ -16,9 +16,10 @@ func NewSecDoubleLinkedList() *SecDoubleLinkedList {
 }
 
 func (sl *SecDoubleLinkedList) AddSecNodeToFront(node *SecNode) {
-	//先把当前数据设置好
+	//先把节点数据设置好
 	node.prev = nil
 	node.next = sl.head
+	//再设置双向链表
 	if sl.head != nil {
 		sl.head.prev = node //将当前头节点的 prev 指针指向新节点
 	}
